@@ -5,7 +5,7 @@ A messenger is simply a function that can be called to create a [`pull-stream`](
 A messenger function has the following signature:
 
 ```
-fn(opts?, callback)
+fn(callback)
 ```
 
 and the callback when executed has the following signature:
@@ -13,6 +13,8 @@ and the callback when executed has the following signature:
 ```
 fn(err, source, sink)
 ```
+
+The idea being that when you require the ability to send and/or receive messages you call the messenger function which initialises and creates a new messenging channel.  In general, you shouldn't care too much about whether the messenger closes and can simply buffer outgoing messages using something like [`pull-pushable`](https://github.com/dominictarr/pull-pushable).  In the event that messenger is closed (you will be able to detect this in both the source and the sink), you simply want to call the messenger function again to reopen the connection.
 
 ## Known Implementations
 
