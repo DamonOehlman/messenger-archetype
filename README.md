@@ -18,11 +18,11 @@ The idea being that when you require the ability to send and/or receive messages
 
 ## Known Implementations
 
-### Complete
+### Complete (or at least usable)
 
-- None yet.
+- [`messenger-memory`](https://github.com/DamonOehlman/messenger-memory) (from `2.0.0` onwards)
+- [`messenger-ws`](https://github.com/DamonOehlman/messenger-ws)
 
 ### Proposed / In Progress
 
-- [`messenger-memory`](https://github.com/DamonOehlman/messenger-memory) (requires refactoring to match the archetype).
-- `messenger-ws` - Will provide a messager via web sockets.
+No known implementations in progress.
